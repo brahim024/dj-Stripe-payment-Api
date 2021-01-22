@@ -35,6 +35,14 @@
 
 <form action="{% url 'charge'%}" method="post" id="payment-form">
   {% csrf_token %}
+  <select id="amount" required name="amount">
+    <option selected value="5">$5 ---- Here is Coffee, on Me</option>
+    <option value="10">$10 ---- Here helped Me thank you</option>
+    <option value="15">$15 ---- I love you your works</option>
+  </select>
+
+    <input type="text" name="email" placeholder="Email...">
+    <input type="text" name="nickname" placeholder="Nickname...">
 	  <div class="form-row">
 	    <label for="card-element">
 	      Credit or debit card
