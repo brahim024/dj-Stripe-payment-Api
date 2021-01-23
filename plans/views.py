@@ -13,6 +13,9 @@ def charge(request):
 	amount = 5
 	if request.method == 'POST':
 		print('Data:', request.POST)
+
+		amount=request.POST['amount']
+
 		customer=stripe.Customer.create(
 			email=request.POST['email'],
 			name=request.POST['nickname'],
